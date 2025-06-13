@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DH-Contentathon 2025 | Martin-Luther-Universität Halle-Wittenberg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .header .subtitle {
+            color: #f0f0f0;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .date-location {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            display: inline-block;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            transform: translateY(20px);
+            animation: slideInUp 1s ease-out 0.8s both;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-section h2::after {
+            background: white;
+        }
+
+        .email-link {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .timeline {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            border-left: 3px solid #667eea;
+            padding-left: 20px;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            width: 13px;
+            height: 13px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DH-Contentathon</h1>
+            <div class="subtitle">24h-Workshop für Digitale Forschungsdaten</div>
+            <div class="date-location">
+                <strong>15.07.2025 (15 Uhr) bis 16.07.2025 (15 Uhr)</strong><br>
+                Martin-Luther-Universität Halle-Wittenberg
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Worum geht es?</h2>
+                <p>
+                    Forschungssoftware ist oft reich an Funktionalitäten, meist aber auch komplex in ihrer Infrastruktur und nicht immer leicht in der Wartung. Diese Aspekte verschärfen sich, wenn die Kapazitäten eines Projektes stark begrenzt sind (z.B. bei 1-Personen-Projekten, wie Dissertationsvorhaben, Abschlussarbeiten oder Projektseminare usw.).
+                </p>
+                <p>
+                    Das war auch die Erfahrung bei <a href="https://baumann-digital.de" target="_blank" style="color: #667eea; text-decoration: none; font-weight: bold;">„Baumann-Digital"</a>, das als „Side"-Projekt im Rahmen eines Dissertationsvorhabens entstand. Leider ist auch bei dieser Software einer der wichtigsten Aspekte auf der Strecke geblieben: Die Dokumentation.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Was ist das Ziel?</h3>
+                <p>
+                    Bei diesem „Work"-shop handelt sich nicht um eine Reihe von Vorträgen und Diskussionen, sondern um ein Arbeitstreffen, bei dem an konkreten Lösungen gearbeitet werden soll. Die Dokumentation der Forschungssoftware von <a href="https://github.com/Baumann-Digital/portal-app" target="_blank" style="color: white; text-decoration: underline;">Baumann-Digital</a> voranzubringen, steht dabei im Zentrum.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Ablauf</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>5 Arbeitsblöcke zu je 90 Minuten</strong>
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Gemütliches Beisammensein</strong> (auf eigene Kosten)
+                    </div>
+                </div>
+                <p>
+                    Im Idealfall entsteht neben der technischen Dokumentation auch ein User-Guide, der die Nachnutzung erleichtern soll. Je nach Zusammensetzung der Gruppe der Teilnehmenden kann auch an der Software selbst gearbeitet werden (Aktualisierungen, Optimierungen, Bug-Fixing, Dockerization, Github CI/CD).
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>👥 Wer kann teilnehmen?</h3>
+                    <p>Max. 20 Personen. Offen für alle, die sich für Digitale Forschungsdaten (TEI-/MEI-XML) und deren Präsentation interessieren. Auch Studierende sind herzlich eingeladen!</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>💰 Reisekosten-Zuschuss</h3>
+                    <p>Bis zu zehn Teilnehmende können einen Zuschuss zu den Reisekosten in Höhe von 200€ erhalten. Studierende werden bei der Vergabe des Zuschusses bevorzugt!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Registrierung & Teilnahme</h2>
+            <p>
+                Bewerbungen als formlose Mail mit Name, Fachgebiet und ggf. Vorerfahrungen im DH-Bereich
+            </p>
+            <a href="mailto:dennis.ried@musikwiss.uni-halle.de" class="email-link">
+                dennis.ried@musikwiss.uni-halle.de
+            </a>
+        </div>
+    </div>
+</body>
+</html>
