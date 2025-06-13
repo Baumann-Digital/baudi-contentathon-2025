@@ -1,0 +1,7 @@
+title: "DH-Contentathon 2025"
+description: "24h-Workshop für Digitale Forschungsdaten an der Martin-Luther-Universität Halle-Wittenberg"
+baseurl: ""
+url: "https://ihr-username.github.io"
+markdown: kramdown
+highlighter: rouge
+theme: minima
